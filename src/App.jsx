@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Importar componente Encabezado.
 import Encabezado from "./components/navegacion/Encabezado";
