@@ -12,6 +12,7 @@ const TablaEmpleados = ({ empleados, cargando }) => {
     );
   }
 
+  
   return (
     <>
       <Table striped bordered hover>

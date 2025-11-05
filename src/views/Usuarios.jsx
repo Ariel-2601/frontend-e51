@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import TablaUsuarios from "../components/usuarios/TablaUsuarios";
+import TablaUsuarios from "../components/Usuario/TablaUsuario";
 import { Container } from "react-bootstrap";
 
 const Usuarios = () => {

@@ -1,36 +1,34 @@
-import { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
-import TablaCategorias from "../components/categorias/TablaCategoria";
+import React, { useState, useEffect } from "react";
+import { Container, Button } from "react-bootstrap";
+import TablaCategoria from "../components/Categorias/TablaCategorias"
 
 const Categorias = () => {
   const [categorias, setCategorias] = useState([]);
   const [cargando, setCargando] = useState(true);
 
-  const obtenerCategorias = async () => {
-    try {
-      const respuesta = await fetch("http://localhost:3000/API/categorias");
-      if (!respuesta.ok) {
-        throw new Error("Error al obtener las categorías");
-      }
-      const datos = await respuesta.json();
-      setCategorias(datos);
-      setCargando(false);
-    } catch (error) {
-      console.log(error.message);
-      setCargando(false);
-    }
-  };
-
   useEffect(() => {
-    obtenerCategorias();
+    // 🔹 Simulamos una carga de datos (puedes cambiar esto por tu API real)
+    setTimeout(() => {
+      const datosEjemplo = [
+        { id_categoria: 1, nombre_categoria: "Ficción", descripcion_categoria: "Libros imaginativos" },
+        { id_categoria: 2, nombre_categoria: "Ciencia", descripcion_categoria: "Divulgación científica" },
+        { id_categoria: 3, nombre_categoria: "Historia", descripcion_categoria: "Acontecimientos históricos" },
+      ];
+      setCategorias(datosEjemplo);
+      setCargando(false);
+    }, 1000);
   }, []);
 
   return (
     <Container className="mt-4">
-      <h4>Categorías</h4>
-      <TablaCategorias categorias={categorias} cargando={cargando} />
+      <h2 className="mb-4">Gestión de Categorías</h2>
+      <Button variant="primary" className="mb-3">Agregar Categoría</Button>
+
+      {/* Aquí mostramos la tabla */}
+      <TablaCategoria categorias={categorias} cargando={cargando} />
     </Container>
   );
 };
 
 export default Categorias;
+

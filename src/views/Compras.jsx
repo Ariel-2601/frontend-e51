@@ -1,7 +1,8 @@
 import {useState, useEffect} from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import TablaCompras from "../components/compras/TablaCompras";
+import TablaCompras from "../components/Compras/TablaCompras";
 import CuadroBusquedas from "../components/busquedas/CuadroBusquedas";
+
 
 const Compras = () => {
   const [compras, setCompras] = useState([]);
@@ -12,7 +13,7 @@ const Compras = () => {
 
   const obtenerCompras = async () => {
     try {
-      const respuesta = await fetch("http://localhost:3000/API/compras");
+      const respuesta = await fetch("http://localhost:3000/API/Compras");
       if (!respuesta.ok) {
         throw new Error("Error al obtener las compras");
       }

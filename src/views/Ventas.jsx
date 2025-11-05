@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
-import TablaVentas from "../components/ventas/TablaVenta";
+import TablaVentas from "../components/Ventas/TablaVentas";
 
 const Ventas = () => {
   const [ventas, setVentas] = useState([]);

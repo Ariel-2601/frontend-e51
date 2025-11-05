@@ -1,7 +1,7 @@
 
 import { Table, Spinner } from "react-bootstrap";
 
-const TablaUsuarios = ({ usuarios, cargando }) => {
+const TablaUsuario = ({ usuarios, cargando }) => {
 
   if (cargando) {
     return (
@@ -41,4 +41,4 @@ const TablaUsuarios = ({ usuarios, cargando }) => {
   );
 }
 
-export default TablaUsuarios;
+export default TablaUsuario;

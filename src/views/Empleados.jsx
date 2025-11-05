@@ -1,13 +1,13 @@
 import { useState,useEffect } from "react";
 import { Container } from "react-bootstrap";
-import TablaEmpleados from "../components/empleados/TablaEmlpeados";
+import TablaEmpleados from "../components/Empleados/TablaEmpleados";
 
 const Empleados = () => {
   const [empleados, setEmpleados] = useState([]);
   const [cargando, setCargando] = useState(true);
   const obtenerEmpleados = async () => {
     try {
-      const respuesta = await fetch("http://localhost:3000/API/empleados");
+      const respuesta = await fetch("http://localhost:3000/API/Empleados");
       if (!respuesta.ok) {
         throw new Error("Error al obtener los empleados");
       }

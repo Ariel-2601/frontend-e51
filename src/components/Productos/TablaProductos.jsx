@@ -1,6 +1,6 @@
 import { Table, Spinner } from "react-bootstrap";
 
-const TablaProductos = ({ productos, cargando }) => {
+const TablaProducto = ({ productos, cargando }) => {
 
   if (cargando) {
     return (
@@ -48,4 +48,4 @@ const TablaProductos = ({ productos, cargando }) => {
   );
 }
 
-export default TablaProductos;
+export default TablaProducto;

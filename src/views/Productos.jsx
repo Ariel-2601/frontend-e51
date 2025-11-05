@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import TablaProductos from "../components/productos/TablaProductos";
+import TablaProductos from "../components/Productos/TablaProductos";
 import CuadroBusquedas from "../components/busquedas/CuadroBusquedas";
 
 const Productos = () => {

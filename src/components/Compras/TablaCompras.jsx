@@ -12,6 +12,7 @@ const TablaCompras = ({ compras, cargando }) => {
     );
   }
 
+  
   return (
     <>
       <Table striped bordered hover>

@@ -4,7 +4,7 @@ import Encabezado from "./components/navegacion/Encabezado";
 
 //Importar las vistas.
 import Login from "./views/Login";
-import Inicio from "./views/Inicio";
+import Inicio from "./views/inicio";
 import Categorias from "./views/Categorias";
 import Productos from "./views/Productos";
 import Catalogo from "./views/Catalogo";

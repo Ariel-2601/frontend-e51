@@ -1,44 +1,43 @@
-import { Table, Spinner } from "react-bootstrap";
+import { Table, Spinner, Button } from "react-bootstrap";
 
-
-const TablaCategorias = ({ categorias, cargando }) => {
+const TablaCategoria = ({ categorias, cargando }) => {
 
   if (cargando) {
     return (
-      <>
+      <div className="text-center mt-4">
         <Spinner animation="border" role="status">
           <span className="visually-hidden">Cargando...</span>
         </Spinner>
-      </>
+        <p>Cargando categorías...</p>
+      </div>
     );
   }
 
   return (
-    <>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre Categoria</th>
-            <th>Descripcion Categorias</th>
-            <th>Acciones</th>
+    <Table striped bordered hover responsive>
+      <thead>
+        <tr className="text-center">
+          <th>ID</th>
+          <th>Nombre Categoría</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {categorias.map((categoria) => (
+          <tr key={categoria.id_categoria}>
+            <td>{categoria.id_categoria}</td>
+            <td>{categoria.nombre_categoria}</td>
+            <td>{categoria.descripcion_categoria}</td>
+            <td className="text-center">
+              <Button variant="warning" size="sm" className="me-2">Editar</Button>
+              <Button variant="danger" size="sm">Eliminar</Button>
+            </td>
           </tr>
-        </thead>
-        <tbody>
-          {categorias.map((categoria) => {
-            return (
-                <tr key={categoria.id_categoria}>
-                  <td>{categoria.id_categoria}</td>
-                  <td>{categoria.nombre_categoria}</td>
-                  <td>{categoria.descripcion_categoria}</td>
-                  <td>Acción</td>
-                </tr>
-            );
-          })}
-        </tbody>
-      </Table>
-    </>
+        ))}
+      </tbody>
+    </Table>
   );
-}
+};
 
-export default TablaCategorias;
+export default TablaCategoria;

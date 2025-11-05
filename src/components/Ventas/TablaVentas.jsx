@@ -1,6 +1,6 @@
 import { Table, Spinner } from "react-bootstrap";
 
-const TablaVentas = ({ ventas, cargando }) => {
+const TablaVenta = ({ ventas, cargando }) => {
 
   if (cargando) {
     return (
@@ -44,4 +44,4 @@ const TablaVentas = ({ ventas, cargando }) => {
   );
 }
 
-export default TablaVentas;
+export default TablaVenta;
